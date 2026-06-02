@@ -1,0 +1,5 @@
+[2024-05-10 09:00:15] WARN: High memory usage detected (75%)
+[2024-05-10 09:00:18] INFO: Scheduled backup started
+[2024-05-10 09:00:21] INFO: Backup completed successfully
+[2024-05-10 09:00:24] ERROR: Failed to connect to external API[2024-05-10 09:00:18 INFO: Scheduled backup started[2024-05-10 09:00:18] INFO:[2024-05-10 09:00:18] OK: Scheduled backup started
+[2024-05-10 09:00:18] INFO: Scheduled backup started

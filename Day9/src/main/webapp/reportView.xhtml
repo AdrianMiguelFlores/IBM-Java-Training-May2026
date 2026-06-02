@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:h="jakarta.faces.html" 
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>View Report</title>
+        <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css" />
+    </h:head>
+    <h:body>
+        <f:metadata>
+            <f:viewParam name="index" value="#{reportViewBean.index}" />
+            <f:viewAction action="#{reportViewBean.loadReport}" />
+        </f:metadata>
+        
+        <h2>View Report</h2>
+        
+        <div class="ui-fluid">
+            <div class="field mb-3">
+                <span class="font-bold">Title: </span>
+                <h:outputText value="#{reportViewBean.report.title}" />
+            </div>
+            <div class="field mb-4">
+                <span class="font-bold">Detail: </span>
+                <h:outputText value="#{reportViewBean.report.detail}" style="white-space: pre-wrap;" />
+            </div>
+        </div>
+        
+        <div class="flex justify-content-end">
+            <p:link outcome="/reportList.xhtml" value="Back" 
+                    styleClass="p-button p-button-secondary" />
+        </div>
+    </h:body>
+</html>
