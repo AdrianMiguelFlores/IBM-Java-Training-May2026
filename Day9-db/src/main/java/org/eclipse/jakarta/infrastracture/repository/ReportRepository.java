@@ -30,7 +30,10 @@ public class ReportRepository {
     }
 
     private Report convertToEntity(ReportDto dto) {
-        if (dto == null) return null;
+        if (dto == null) {
+        	return null;
+        }
+        
         Report entity = new Report();
         
         entity.setTitle(dto.getTitle());
@@ -56,7 +59,10 @@ public class ReportRepository {
     }
     
     public ReportDto findByIndex(Integer index) {
-        if (index == null || index < 0) return null;
+        if (index == null || index < 0) {
+        	return null;
+        }
+        
         List<Report> entities = getAllEntities();
         if (index < entities.size()) {
             return convertToDto(entities.get(index));
@@ -66,7 +72,10 @@ public class ReportRepository {
 
     @Transactional
     public void update(Integer index, ReportDto updatedReportDto) {
-        if (index == null || index < 0 || updatedReportDto == null) return;
+        if (index == null || index < 0 || updatedReportDto == null) {
+        	return;
+        }
+        
         List<Report> entities = getAllEntities();
         if (index < entities.size()) {
             Report existingEntity = entities.get(index);
@@ -78,7 +87,10 @@ public class ReportRepository {
     
     @Transactional
     public void delete(Integer index) {
-        if (index == null || index < 0) return;
+        if (index == null || index < 0) {
+        	return;
+        }
+        
         List<Report> entities = getAllEntities();
         if (index < entities.size()) {
             Report entity = entities.get(index);
